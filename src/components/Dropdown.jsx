@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import Select from 'react-select'
 
 const Dropdown = ({ options, setIsOptionSelected, label }) => {
-    const [selectedOption, setSelectedOption] = useState(null);
+    const [selectedOption, setSelectedOption] = useState("");
     const handleChange = (selectedOption) => {
-        setSelectedOption(selectedOption)
-        setIsOptionSelected(true)
+        setSelectedOption(selectedOption.value)
+        setIsOptionSelected(selectedOption.value)
     }
 
     return (
