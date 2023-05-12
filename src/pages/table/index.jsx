@@ -1,5 +1,5 @@
 import React from "react";
-import { getParameters } from "../../utils";
+import { getParameters, getTestsForProduct, getTests } from "../../utils";
 import styles from "../../styles/table.css"
 
 const Table = () => {

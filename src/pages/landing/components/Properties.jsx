@@ -13,7 +13,9 @@ const Properties = ({ parameters }) => {
                 return (
                     <div className="mb-4" style={{ display: 'flex', justifyContent: 'space-between' }} key={parameter.id}>
                         <span className="form-label">{parameter.name}</span>
-                        <div style={{ display: 'flex', justifyContent: 'space-between' }}></div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>¸
+                            <input type="range" />
+                        </div>
                     </div >
                 )
             })}
