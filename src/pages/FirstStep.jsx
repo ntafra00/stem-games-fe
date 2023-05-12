@@ -14,6 +14,7 @@ const FirstStep = ({ setStepCounter }) => {
             <div className="card-body">
                 <h2 className="card-title text-center mb-4">Choose test parameters</h2>
                 <Dropdown options={projectOptions} setIsOptionSelected={handleProjectSelection} label='Select project' />
+                {/* {isProjectSelected && <Dropdown label='Select family name' options={getFamilyOptions(projectOptions)} />} */}
                 {false && <div style={{ display: 'flex', justifyContent: 'end' }}>
                     <button className="btn btn-primary" onClick={handleStepChange}>
                         Continue
