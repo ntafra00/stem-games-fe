@@ -71,4 +71,7 @@
   width: 30px;
   cursor: pointer;
 }
+.rwd-table th .id {
+  width: 100px;
+}
   

@@ -11,20 +11,31 @@ const Table = () => {
           <th className="title">Filtered test vectors for XXXX</th>
         </tr>
         <tr>
-          <th>Id</th>
+          <th className="id">Id</th>
           {getParameters(nameOfFamily).map((parameter) => {
             return (
               <>
-              <th className={styles.th} key={parameter.id}>{parameter.name}</th>
+              <th className="th" key={parameter.id}>{parameter.name}</th>
               </>
             )
           })}
         </tr>
         <tr>
-          <td>Star Wars</td>
-          <td>Adventure, Sci-fi</td>
-          <td>1977</td>
-          <td>$460,935,665</td>
+          <td>885</td>
+          <td>885</td>
+          <td>885</td>
+          <td>885</td>
+          <td>885</td>
+          <td>885</td>
+          <td>885</td>
+          <td>885</td>
+          <td>885</td>
+          <td>885</td>
+          <td>885</td>
+          <td>885</td>
+          <td>885</td>
+          <td>885</td>
+          <td>885</td>
           <td><img src="src\assets\close.png" className="x-img"></img></td>
         </tr>
         
