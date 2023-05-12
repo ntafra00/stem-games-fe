@@ -14,7 +14,9 @@ const Table = () => {
           <th>Id</th>
           {getParameters(nameOfFamily).map((parameter) => {
             return (
+              <>
               <th className={styles.th} key={parameter.id}>{parameter.name}</th>
+              </>
             )
           })}
         </tr>
@@ -23,6 +25,7 @@ const Table = () => {
           <td>Adventure, Sci-fi</td>
           <td>1977</td>
           <td>$460,935,665</td>
+          <td><img src="src\assets\close.png" className="x-img"></img></td>
         </tr>
         
       </table>
