@@ -28,10 +28,17 @@
   }
   
   .rwd-table td::before {
-    content: attr(data-th) ": ";
     font-weight: bold;
     display: inline-block;
-    width: 120px;
+    width: 100px;
+  }
+  .rwd-table .title-container {
+    display: flex;
+    justify-content: center;
+  }
+  .rwd-table .title {
+    text-align: center;
+    width: max-content;
   }
   
   @media (max-width: 767px) {
