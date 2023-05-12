@@ -1,136 +1,39 @@
 import React from "react";
 import {getParametars} from "../../utils";
+import styles from "../../styles/table.css"
 
 const Table = () => {
     const nameOfFamily = "L1"
   return (
-    <div className="page page-center">
-      <div className="card card-md">
-        <div className="card-body">
-          <table className="table table-vcenter card-table">
-            <thead>
-             <tr>
-                <th className="text-center">Test vectors for sample X</th>
-             </tr>
-              <tr>
-                {getParametars(nameOfFamily).map((parameter) => {
-                return (
-                    <th key={parameter.id}>{parameter.name}</th>
-                )
-            })}
-                <th className="w-1"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div className="d-flex py-1 align-items-center">
-                    <span className="avatar me-2"></span>
-                    <div className="flex-fill">
-                      <div className="font-weight-medium">Lorry Mion</div>
-                      <div className="text-muted"><a href="#" className="text-reset">lmiona@livejournal.com</a></div>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div>Automation Specialist IV</div>
-                  <div className="text-muted">Accounting</div>
-                </td>
-                <td className="text-muted">
-                  User
-                </td>
-                <td>
-                  <a href="#">Edit</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div className="d-flex py-1 align-items-center">
-                    <span className="avatar me-2"></span>
-                    <div className="flex-fill">
-                      <div className="font-weight-medium">Leesa Beaty</div>
-                      <div className="text-muted"><a href="#" className="text-reset">lbeatyb@alibaba.com</a></div>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div>Editor</div>
-                  <div className="text-muted">Services</div>
-                </td>
-                <td className="text-muted">
-                  Admin
-                </td>
-                <td>
-                  <a href="#">Edit</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div className="d-flex py-1 align-items-center">
-                    <span className="avatar me-2"></span>
-                    <div className="flex-fill">
-                      <div className="font-weight-medium">Perren Keemar</div>
-                      <div className="text-muted"><a href="#" className="text-reset">pkeemarc@yahoo.com</a></div>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div>Analog Circuit Design manager</div>
-                  <div className="text-muted">Services</div>
-                </td>
-                <td className="text-muted">
-                  User
-                </td>
-                <td>
-                  <a href="#">Edit</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div className="d-flex py-1 align-items-center">
-                    <span className="avatar me-2">SA</span>
-                    <div className="flex-fill">
-                      <div className="font-weight-medium">Sunny Airey</div>
-                      <div className="text-muted"><a href="#" className="text-reset">saireyd@prlog.org</a></div>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div>Nuclear Power Engineer</div>
-                  <div className="text-muted">Engineering</div>
-                </td>
-                <td className="text-muted">
-                  Owner
-                </td>
-                <td>
-                  <a href="#">Edit</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div className="d-flex py-1 align-items-center">
-                    <span className="avatar me-2"></span>
-                    <div className="flex-fill">
-                      <div className="font-weight-medium">Geoffry Flaunders</div>
-                      <div className="text-muted"><a href="#" className="text-reset">gflaunderse@loc.gov</a></div>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div>Software Test Engineer II</div>
-                  <div className="text-muted">Accounting</div>
-                </td>
-                <td className="text-muted">
-                  Admin
-                </td>
-                <td>
-                  <a href="#">Edit</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+    <div>
+    <table className="rwd-table">
+      <tr>
+        <th>Id</th>
+      {getParametars(nameOfFamily).map((parameter) => {
+        return (
+             <th className={styles.th} key={parameter.id}>{parameter.name}</th>
+         )
+    })}
+      </tr>
+      <tr>
+        <td data-th="Movie Title">Star Wars</td>
+        <td data-th="Genre">Adventure, Sci-fi</td>
+        <td data-th="Year">1977</td>
+        <td data-th="Gross">$460,935,665</td>
+      </tr>
+      <tr>
+        <td data-th="Movie Title">Howard The Duck</td>
+        <td data-th="Genre">"Comedy"</td>
+        <td data-th="Year">1986</td>
+        <td data-th="Gross">$16,295,774</td>
+      </tr>
+      <tr>
+        <td data-th="Movie Title">American Graffiti</td>
+        <td data-th="Genre">Comedy, Drama</td>
+        <td data-th="Year">1973</td>
+        <td data-th="Gross">$115,000,000</td>
+      </tr>
+    </table>
     </div>
   );
 };
