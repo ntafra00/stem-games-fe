@@ -1,24 +1,17 @@
-import React, { useState } from 'react'
-import FirstStep from './pages/FirstStep';
-import StepGuide from './components/StepGuide';
-import SecondStep from './pages/SecondStep';
+import React from 'react'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LandingPage from './pages/landing';
+import Table from './pages/table';
 
 const App = () => {
-  const [stepCounter, setStepCounter] = useState(1);
   return (
-    <div className="page page-center">
-      <div className="container-tight py-4">
-        {stepCounter === 1 && (
-          <FirstStep
-            stepCounter={stepCounter}
-            setStepCounter={setStepCounter}
-          />
-        )}
-        {stepCounter === 2 && (
-          <SecondStep stepCounter={stepCounter} setStepCounter={setStepCounter} />
-        )}
-      </div>
-    </div>)
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<LandingPage />} />
+        <Route path='/table' element={<Table />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;

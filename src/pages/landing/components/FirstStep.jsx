@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
-import Dropdown from "../components/Dropdown";
-import { projectOptions } from "../consts";
-import { getProductNames } from "../utils";
+import Dropdown from "../../../components/Dropdown";
+import { projectOptions } from "../../../consts";
+import { getProductNames } from "../../../utils";
 
 const FirstStep = ({ setStepCounter }) => {
     const [isProjectSelected, setIsProjectSelected] = useState(false);
