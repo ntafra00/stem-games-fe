@@ -35,6 +35,8 @@ export const getTests = (testPointColection) => {
     for (let i = 0; i < 2 * periodPoint[0]; i++)
         for(let j = 0; j < testPointColection[i].length; j++)
             dataTable[i][j] = testPointColection[j][Math.floor(i / periodPoint[j]) % testPointColection[i][j]];
+
+    return dataTable;
 }
 
 export const getTestsForProduct = (key, productId) => {
