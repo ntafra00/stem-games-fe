@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Dropdown from "../../../components/Dropdown";
 import { projectOptions } from "../../../consts";
 import { getParameters, getProductNames } from "../../../utils";
 import { useNavigate } from 'react-router-dom'
 import Properties from "./Properties";
 
-const FirstStep = ({ setStepCounter }) => {
+const FirstStep = () => {
     const navigate = useNavigate();
     const [isProjectSelected, setIsProjectSelected] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
@@ -53,6 +53,9 @@ const FirstStep = ({ setStepCounter }) => {
                 isChipSelected && <div className="card card-md">
                     <div className="card-body">
                         <Properties parameters={getParameters(selectedProject.value, '')} />
+                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
+                            <button className="btn btn-primary" onClick={handleButtonClick}>Continue</button>
+                        </div>
                     </div>
                 </div>
             }

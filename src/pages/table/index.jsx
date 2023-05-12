@@ -1,9 +1,8 @@
 import React from "react";
-import { getParameters, getTestsForProduct } from "../../utils";
+import { getParameters, getTestsForProduct, getTests } from "../../utils";
 import styles from "../../styles/table.css"
 
 const Table = () => {
-  console.log(getTestsForProduct('L1', '1'))
   const nameOfFamily = "L1"
   return (
     <div>
