@@ -7,15 +7,10 @@ const LandingPage = () => {
     return (
         <div className="page page-center">
             <div className="container-tight py-4">
-                {stepCounter === 1 && (
-                    <FirstStep
-                        stepCounter={stepCounter}
-                        setStepCounter={setStepCounter}
-                    />
-                )}
-                {stepCounter === 2 && (
-                    <SecondStep stepCounter={stepCounter} setStepCounter={setStepCounter} />
-                )}
+                <FirstStep
+                    stepCounter={stepCounter}
+                    setStepCounter={setStepCounter}
+                />
             </div>
         </div>
     )
