@@ -18,14 +18,13 @@ export const getProductNames = (key) => {
 };
 
 
-export const getParametars = (key, id) => {
+export const getParametars = (key) => {
     return projects[key].Project.InputConditions.map((condition) => {
         return {
             id: condition.Id,
             name: condition.Parameter,
             min: condition.Min,
             max: condition.Max,
-            unit: condition.Unit,
         }
     })
 }

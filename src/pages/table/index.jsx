@@ -1,22 +1,23 @@
 import React from "react";
+import {getParametars} from "../../utils";
 
 const Table = () => {
-
+    const nameOfFamily = "L1"
   return (
     <div className="page page-center">
       <div className="card card-md">
         <div className="card-body">
           <table className="table table-vcenter card-table">
             <thead>
+             <tr>
+                <th className="text-center">Test vectors for sample X</th>
+             </tr>
               <tr>
-                {/* {columns.map((product) => {
+                {getParametars(nameOfFamily).map((parameter) => {
                 return (
-                    <th key={product.id} />
+                    <th key={parameter.id}>{parameter.name}</th>
                 )
-            })} */}
-                <th>Id</th>
-                <th>Title</th>
-                <th>Role</th>
+            })}
                 <th className="w-1"></th>
               </tr>
             </thead>
