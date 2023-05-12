@@ -22,3 +22,15 @@ export const getParameters = (key) => {
     })
 }
 
+export const getTestsForProduct = (key, productId) => {
+    return projects[key].Project.Samples.find((sample) => sample.Id === productId).Tests.map((test) => {
+        return {
+            id: test.Id,
+            name: test.TestName,
+            min: test.Min,
+            max: test.Max,
+        }
+    })
+}
+
+
