@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Dropdown from "../../../components/Dropdown";
 import { projectOptions } from "../../../consts";
-import { getParametars, getProductNames } from "../../../utils";
+import { getParameters, getProductNames } from "../../../utils";
 import { useNavigate } from 'react-router-dom'
 import Properties from "./Properties";
 
@@ -52,7 +52,7 @@ const FirstStep = ({ setStepCounter }) => {
             {
                 isChipSelected && <div className="card card-md">
                     <div className="card-body">
-                        <Properties parameters={getParametars(selectedProject.value, '')} />
+                        <Properties parameters={getParameters(selectedProject.value, '')} />
                     </div>
                 </div>
             }

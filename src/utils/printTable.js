@@ -22,6 +22,7 @@ export const getParameters = (key) => {
     })
 }
 
+<<<<<<< HEAD
 
 export const getTests = () => {
     
@@ -65,3 +66,17 @@ console.log(arrayPeriod[0] );
 
 let a = 1;
 }
+=======
+export const getTestsForProduct = (key, productId) => {
+    return projects[key].Project.Samples.find((sample) => sample.Id === productId).Tests.map((test) => {
+        return {
+            id: test.Id,
+            name: test.TestName,
+            min: test.Min,
+            max: test.Max,
+        }
+    })
+}
+
+
+>>>>>>> c158815e0433decfb0a0ab29644563928523af45
