@@ -11,8 +11,7 @@ export const getProductNames = (key) => {
 };
 
 
-export const getParametars = (key, id) => {
-    console.log(projects[key].Project.InputConditions);
+export const getParameters = (key) => {
     return projects[key].Project.InputConditions.map((condition) => {
         return {
             id: condition.Id,
