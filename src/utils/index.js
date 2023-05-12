@@ -23,8 +23,21 @@ export const getParameters = (key) => {
 }
 
 
-export const getTests = () => {
-    
+export const getTests = (testPointColection) => {
+    let periodPoint = [];
+    periodPoint[testPointColection.length - 1] = 1;
+
+    for(let i = periodPoint.length - 2; i >= 0; i--)
+
+
+    for (let i = 0; i < 2 * arrayPeriod1[0]; i++) {
+        console.log("\t" +  dataArray[0][Math.floor(i / arrayPeriod1[0]) % size[0]] + "\t\t" +
+                            dataArray[1][Math.floor(i / arrayPeriod1[1]) % size[1]] + "\t\t" +
+                            dataArray[2][Math.floor(i / arrayPeriod1[2]) % size[2]] + "\t\t" +
+                            dataArray[3][Math.floor(i / arrayPeriod1[3]) % size[3]] + "\t\t" +
+                            dataArray[4][Math.floor(i / arrayPeriod1[4]) % size[4]]);
+    }
+
 const operatingHumidity = [10, 20, 30, 40, 50, 60, 70, 80, 90];
 const operatingAltitude = [0, 5000];
 const powerConsumption = [100, 250, 400, 550, 700, 850, 1000];
@@ -48,9 +61,6 @@ const arrayPeriod = [
     sizeHum * sizeAltidue * sizeConsum,
     sizeHum * sizeAltidue,
     sizeHum];
-
-console.log("\n\noperatingHumidity\toperatingAltitude\tpowerConsumption\ti2cClockSpeed\toperatingVoltage")
-
 for (let i = 0; i < 2 * arrayPeriod1[0]; i++) {
     console.log("\t" +  dataArray[0][Math.floor(i / arrayPeriod1[0]) % size[0]] + "\t\t" +
                         dataArray[1][Math.floor(i / arrayPeriod1[1]) % size[1]] + "\t\t" +
